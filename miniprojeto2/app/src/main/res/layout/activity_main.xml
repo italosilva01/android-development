@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/gorjeta"
+        />
+
+
+    <EditText
+        android:id="@+id/etvalueproduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="number" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:id="@+id/tvcupom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cupom de desconto?"
+            android:layout_gravity="center_vertical"
+            />
+        <Switch
+            android:id="@+id/swswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvcupom"
+            android:layout_gravity="center_vertical"
+
+
+            />
+
+        <EditText
+            android:id="@+id/etDesconto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/swswitch"
+            android:tooltipText="Desconto"
+            android:enabled="false"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        >
+
+        <TextView
+            android:id="@+id/percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="48%"
+            />
+
+        <SeekBar
+            android:id="@+id/desconto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_toRightOf="@+id/percent"
+            android:max="100" />
+
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+
+        >
+
+        <TextView
+            android:id="@+id/cashback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cashback"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvcashbackValue"
+            android:text="R$ 480.0"
+            android:layout_toRightOf="@+id/cashback"
+            android:layout_marginLeft="20dp"
+android:background="@color/primaria"    />
+
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:layout_below="@+id/cashback"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTotalValue"
+            android:text="R$ 480.0"
+            android:layout_below="@+id/cashback"
+            android:layout_marginLeft="50dp"
+            android:background="@color/primaria"
+            android:layout_toRightOf="@+id/tvTotal"
+            android:layout_marginTop="5dp"
+
+
+            />
+    </RelativeLayout>
+
+</LinearLayout>
